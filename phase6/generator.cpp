@@ -604,7 +604,7 @@ void Not::generate() {
     cout << "\tcmp" << suffix(_expr);
     cout << "$0, " << _expr << endl;
     cout << "\tsete\t" << _expr->_register->byte() << endl;
-    cout << "\tmovzbl\t" << _expr->_register->byte() << ", " << _expr->_register << endl;
+    cout << "\tmovzbl\t" << _expr->_register->byte() << ", " << _expr->_register->name(4) << endl;
     assign(this, _expr->_register);
 }
 
