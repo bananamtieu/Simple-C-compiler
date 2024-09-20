@@ -10,7 +10,7 @@ insert:
 	movq	-8(%rbp), %rax
 	cmpq	$0, %rax
 	sete	%al
-	movzbl	%al, %rax
+	movzbl	%al, %eax
 	cmpl	$0, %eax
 	je	.L0
 # Generating mul
@@ -124,7 +124,7 @@ search:
 	movq	-8(%rbp), %rax
 	cmpq	$0, %rax
 	sete	%al
-	movzbl	%al, %rax
+	movzbl	%al, %eax
 	cmpl	$0, %eax
 	je	.L6
 # Generating return
